@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 ie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8 ie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9 ie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Java NIO 简要</title>
+	<meta name="author" content="dean bear">
+	<link href='/assets/themes/the-program/css/style.css' rel="stylesheet" media="all">
+	<link href="http://feeds.feedburner.com/" rel="alternate" title="Java NIO 简要" type="application/atom+xml">
+</head>
+<body>
+
+<div id="page" class="hentry">
+	<header class="the-header">
+		<div class="unit-head">
+			<div class="unit-inner unit-head-inner">
+				<nav class="nav-global">
+					<ul>
+						<li class="logo"><a href="/">熊迪恩</a></li>
+						<li class="archive"><a href="/archive.html">archive</a></li>
+						<li class="page"><a href="/pages.html">pages</a></li>
+						<li class="category"><a href="/categories.html">categories</a></li>
+						<li class="tag"><a href="/tags.html">tags</a></li>
+					</ul>
+				</nav>
+			</div><!-- unit-inner -->
+		</div><!-- unit-head -->
+	</header>
+	<div class="body" role="main">
+		<div class="unit-body">
+			<div class="unit-inner unit-body-inner">
+				<div class="entry-content">
+					
+<article class="unit-article layout-post">
+	<div class="unit-inner unit-article-inner">
+		<div class="content">
+			<header>
+				<div class="unit-head">
+					<div class="unit-inner unit-head-inner">
+						<h1 class="h2 entry-title">Java NIO 简要</h1>
+					</div><!-- unit-inner -->
+				</div><!-- unit-head -->
+			</header>
+
+			<div class="bd">
+				<div class="entry-content">
+					<p>来源于Java 1.4的java.nio软件包，被命名为New I/O，随着时间流逝，已经不算New了，称为Non-Blocking I/O还是更合适一些。</p>
+
+<p>Java nio的三个核心：</p>
+
+<ul>
+<li><p>Buffer</p></li>
+<li><p>Channel</p></li>
+<li><p>Selector</p></li>
+</ul>
+
+
+<p>Buffer包装了基本数据元素数组对象，处理数据缓存，作为一个缓冲区，是nio数据读或写的中转地。</p>
+
+<p>Channel提供了操作文件描述方法，实现类调用底层操作系统低级IO方法read，write，处理Buffer对象读写，是Buffer对象的唯一接口。是数据的源头或者数据的目的地。
+<img src="http://ww2.sinaimg.cn/mw690/6fbda5afgw1e0sy54f9d8j.jpg" alt="Buffer&amp;Channel" />
+Buffer与Channel提高了I\O效率，Buffer以数据块代替了字节传输数据，而Channel作为双向通道，同时能检查Buffer块是否准备完毕，如果没有则返回执行其他任务等待下次轮询或者通知，而不阻塞在此等待数据，这就是非阻塞I\O。</p>
+
+<p>但NIO真正厉害的，精髓所在是第三个核心，Selector。有了Selector，将SocketChannel注册到Selector上，并标明SelectorKey关注的是哪类数据操作(读，写，建立连接，接受连接等)。Selector筛选准备好的Socket，提供给工作线程进行逻辑加工响应请求，这就可以将NIO衍生到Web服务的解决方案，即是NIO的卖点：I/O multiplexing(IO多路复用) + Non-blocking I/O(非阻塞IO)。</p>
+
+<p>Selector用到的设计模式是Reactor模式。Reactor模式翻译为反映堆模式还是准确的。Reactor模式是对多个同步事件进行分拣和派发。做一个比喻就是，一个人去钓鱼，撑出了好多支的鱼竿，然后就一边和旁边的MM聊天，一边观察这一排的鱼竿有没有鱼上钩的，如果其中有鱼竿有动作，那么就把鱼钓上来。在这里，鱼相当于数据或者请求，鱼竿代表Socket Channel，而人，就是Selector。这个组成就是一个典型的Reactor模式。这个比喻也是现在以NIO为基础的服务器的大致结构。
+<img src="http://ww1.sinaimg.cn/mw690/6fbda5afgw1e0sy54sx1dj.jpg" alt="Old IO &amp; New IO" />
+传统的服务器，如Jboss，有多少个请求连接，就创建多少线程，分别处理请求，当请求连接遇到网络问题时，则线程阻塞等待。在高并发的情况下，由于阻塞造成大量请求堆积，以及频繁的线程上下文的切换占用资源，对于服务器来说都是致命的。</p>
+
+<!-- more -->
+
+
+<p>如果换成NIO模式的处理请求，则是由一个线程统一管理所有进来的连接，这个线程持有的Selector对连接进行轮询，整理出已经准备完毕的连接，并派发给工作线程，让工作线程处理请求所想要的逻辑并响应结束掉这个连接，以便工作线程重复使用，接入下一个请求。将接收请求和处理请求两个阶段解藕，管理请求的前台线程和处理请求的后台线程分工合作，让服务器的资源得到合理使用。Tomcat是支持NIO的服务器，而Jetty则是支持NIO的Servlet容器。而Netty，Mina，Grizzly等都是以NIO原理为基础的框架，能依场景需求做出定制化的服务器端满足需求。</p>
+
+<p>综上所述，NIO带来了：</p>
+
+<ul>
+<li><p>避免不必要的多线程(处理请求线程&lt;连接数)</p></li>
+<li><p>单线程处理多任务(接收请求线程一夫当关万夫莫敌)</p></li>
+<li><p>非阻塞IO(线程处理IO阻塞来去自由)</p></li>
+<li><p>IO多路复用(本次阻塞也没关系，可等下次又轮询到时操作I\O)</p></li>
+<li><p>基于块传输，比流传输更高效(正常情况)</p></li>
+</ul>
+
+
+<p>但同时，使用NIO并不一定带来高性能，下述4个场景是根据大牛经验总结的不合适场景</p>
+
+<ul>
+<li><p>客户端应用</p></li>
+<li><p>连接数&lt;1000</p></li>
+<li><p>并发程度不高</p></li>
+<li><p>局域网环境下</p></li>
+</ul>
+
+
+<p>最后对于我们是否需要利用NIO框架自己搭建服务，可以套用国外网友回答"到底是用Netty还是Jetty"的问题：</p>
+
+<p>Jetty has had support for asynchronous request processing since version 6, using a proprietary API. More recent versions support the asynchronous API as part of the Servlet 3.0 API, like any other compliant implementation.</p>
+
+<p>Using Netty would seem like a lot of work for little gain, unless you have highly specific requirements. Otherwise, Jetty would do the job for you with minimal effort.</p>
+
+<p>若有高度定制化需求，则采用NIO框架自己搭建，若没有，则采用已经存在的服务器，避免重复制造轮子的过程。我暂时看不出来我们的应用有能够高度定制的地方，并且作为前端应用，搭建出符合安全，细节，以及能与原体系架构能匹配的服务器，需要花费很大的功夫，但对于性能有多少提升，并不明朗。</p>
+
+<hr />
+
+<p>既然说到NIO，再搭车说说其他几种IO。
+<img src="http://ww3.sinaimg.cn/mw690/6fbda5afgw1e0t0mnlztoj.jpg" alt="4 kinds of io" />
+看图说话，非阻塞，阻塞IO都属于同步IO，异步IO的效率远远高于同步IO。
+点击<a href="http://blog.csdn.net/historyasamirror/article/details/5778378">这里</a>，这篇文很好的解释了这4个概念。我就不重复说了，这个知识还是很重要的。</p>
+
+					<div class="meta">
+						<p class="date-publish">
+							Published: 
+							<date class="date-pub" title="2013-01-14T19:54:01+08:00" datetime="2013-01-14T19:54:01+08:00" pubdate>
+							<span class="month"><abbr>January</abbr></span>
+							<span class="day">14</span>
+							<span class="year">2013</span>
+							</date>
+						</p>
+						<ul class="list-category list-linear">
+							<li class="list-head">category: </li>
+							
+							
+
+
+  
+     
+    	<li><a href="/categories.html#技术流-ref">
+    		技术流 <span>3</span>
+    	</a></li>
+    
+  
+
+
+						</ul>
+						<ul class="list-tag list-linear">
+							<li class="list-head">tags: </li>
+							
+							
+
+
+  
+     
+    	<li><a href="/tags.html#nio-ref">nio <span>1</span></a></li>
+    
+  
+
+
+
+						</ul>
+					</div><!-- meta -->
+				</div><!-- entry-content -->
+				<div class="misc-content">
+					<div class="social">
+						<ul class="list-linear">
+							<li><div class="twitter-tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="username" data-lang="en">Tweet</a></div></li>
+							<li><div class="twitter-follow"><a href="https://twitter.com/username" class="twitter-follow-button" data-show-count="false" data-lang="en"></a></div></li>
+						</ul>
+					</div>
+					<div class="comment">
+					
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'deanbear'; // required: replace example with your forum shortname
+    var disqus_identifier = '97 http://deanbear.github.com/?p=97';
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+					</div>
+				</div><!-- misc-content -->
+			</div><!-- bd -->
+			<footer class="unit-foot">
+				<div class="unit-inner unit-foot-inner">
+					<nav class="pagination">
+						<ul>
+							
+							<li class="prev"><a class="internal" rel="prev"  href="/2012/12/13/letsgo_rockandroll" title="View 摇滚吧，邓丽君">&laquo; 摇滚吧，邓丽君</a></li>
+							
+							
+							<li class="pipe"> | </li>
+							
+							
+							<li class="next"><a class="internal" rel="next"  href="/2013/02/08/my2012" title="View 我的2012">我的2012 &raquo;</a></li>
+							
+						</ul>
+					</nav>
+					<p class="gotop">
+						<a href="#page">Back to Top</a>
+					</p>
+				</div>
+			</footer>
+
+		</div><!-- content -->
+	</div><!-- unit-inner -->
+</article>
+
+
+				</div>
+			</div><!-- unit-inner -->
+		</div><!-- unit-body -->
+	</div><!-- body -->
+	<footer class="the-footer">
+		<div class="unit-foot">
+			<div class="unit-inner unit-foot-inner">
+				<div class="misc vcard">
+					<h4>about</h4>
+					<ul>
+						<li class="contact"><address><span class="author fn n">dean bear</span> - <span class="fn email">deanbear1990@gmail.com</span></address></li>
+						<li class="github"><a href="http://github.com/username/" rel="me">github.com/username</a></li>
+						<li class="twitter"><a href="http://twitter.com/username/" rel="me">twitter.com/username</a></li>
+						<li class="rss"><a href="http://feeds.feedburner.com/">Subscribe to RSS Feed</a></li>
+					</ul>
+				</div><!-- misc -->
+				<p class="licence">
+					Theme: <a href="http://layouts-the.me">the_minimum</a> based on <a href="http://jekyllbootstrap.com/">Jekyll-bootstrap</a>.<br>
+					Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
+				</p>
+			</div><!-- unit-foot-inner -->
+		</div><!-- unit-foot -->
+	</footer>
+</div><!-- page -->
+<script>
+	(function(d, s) {
+		var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
+		if (d.getElementById(id)) {return;}
+		js = d.createElement(s); js.src = url; js.id = id;
+		fjs.parentNode.insertBefore(js, fjs);
+		};
+	load('//platform.twitter.com/widgets.js', 'tweetjs');
+	// load('https://apis.google.com/js/plusone.js', 'gplus1js'); // Checkout http://j.mp/ApDgMr for usage html for this is <div class="g-plusone" data-size="medium"></div>
+	// load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk'); // Checkout http://j.mp/wZw2xR for using open graph protorol html for this is <div class="fb-like" data-href="/2013/01/14/java-nio-brief" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+	}(document, 'script'));
+</script>
+<script>
+/*! A fix for the iOS orientationchange zoom bug.Script by @scottjehl, rebound by @wilto. MIT License.*/
+(function(j){var i=j.document;if(!i.querySelectorAll){return}var l=i.querySelectorAll("meta[name=viewport]")[0],a=l&&l.getAttribute("content"),h=a+", maximum-scale=1.0",d=a+", maximum-scale=10.0",g=true,c=j.orientation,k=0;if(!l){return}function f(){l.setAttribute("content",d);g=true}function b(){l.setAttribute("content",h);g=false}function e(m){c=Math.abs(j.orientation);k=Math.abs(m.gamma);if(k>8&&c===0){if(g){b()}}else{if(!g){f()}}}j.addEventListener("orientationchange",f,false);j.addEventListener("deviceorientation",e,false)})(this);
+</script>
+  
+  
+</body>
+</html>
+
