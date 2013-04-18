@@ -655,9 +655,13 @@ pre {
 .unit-article .entry-content:first-child h6 {
   margin-top: 0;
 }
+.unit-article a:link {
+  border-bottom: 1px dashed #ad4346;
+}
 .unit-article a:visited {
   border-bottom: 1px solid  #ad4346;
 }
+
 .unit-article a:hover {
   border-bottom: 1px solid #ad4346;
   color : #ad4346;

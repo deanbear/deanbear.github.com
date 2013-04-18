@@ -7,7 +7,7 @@ slug: make-your-own-luck-idiot
 title: 不是你运气不好，而是你没买彩票
 wordpress_id: 134
 categories:
-- 胡说/Who says
+- 胡说/Who Says
 tags:
 - 生活
 - 运气是自己的不是别人给的
