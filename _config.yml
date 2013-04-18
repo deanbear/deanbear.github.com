@@ -5,18 +5,19 @@ markdown: rdiscount
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 auto: true
 pygments: true
-
+paginate: 16
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : 熊迪恩 
+title : The Dean Bear
 tagline: We can be heroes/Just for one day
-author :
-  name : dean bear
+author : 
+  name : Bear
   email : deanbear1990@gmail.com
-  github : username
-  twitter : username
-  feedburner : feedname
+  github : deanbear
+  twitter : db_tt
+  feedburner : thedeanbear
+  weibo : deanbear
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 

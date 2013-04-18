@@ -21,17 +21,5 @@ tags:
 
 昨天老马当选2012CCTV中国经济年度人物，和王健林的对话很有意思。王健林说马云太时尚，没想到穿成这样来颁奖(老马没穿西装)。老马回答说你觉得我穿的不对吗？其实我们努力的一切的目的，就是可以做自己，我觉得穿西装不像自己，穿着这个特像自己，所以穿成这样。这段话真的很赞。努力的一切的目的就是可以做自己。做自己想做的事情，就是一种做自己。挺好的。
 
-最后昨晚睡觉时，我又回想了一遍。发了短信给老李，内容如下：
-
-M:British Rock, perhaps Punk. I don't know. Now my favorite band is Coldplay.
-
-Li:Punk is brilliant.luv whatshername from greenday. night bro, looking forward to ur dropping by 1.1
-
-M:梦想遥远，尽力而为
-
-Li:谢谢哥
-
-
-
 开始了就不迟，希望一切顺利，Let's go ，Rock'n'Roll.
 *『摇滚吧，邓丽君』文章名字来源于九把刀<猎命师>卷3，乌拉拉说的。
