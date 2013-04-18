@@ -7,12 +7,10 @@ slug: java-concurrency-in-practice-part-i-fundamental
 title: Java并发编程笔记-PART I.基本原理
 wordpress_id: 80
 categories:
-- Java Concurrency in Practice
 - 笔记
 tags:
 - concurrency
 - Java并发编程
-- reading note
 ---
 
  学了好几年的编程，对于多线程一直没有进门，反复看了好多Java入门书籍顺带的多线程，无法顿悟其奥义。这本Java Concurrency In Practice，希望能解决我多年来的苦恼，所以好好读，做读书笔记，概括每章节的内容。一共有4个部分组成，每个部分一篇笔记。

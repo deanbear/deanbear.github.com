@@ -7,12 +7,10 @@ slug: java-concurrency-in-practice-part-ii-structuring-concurrent-applications
 title: Java并发编程笔记-PART II.构建并发应用
 wordpress_id: 120
 categories:
-- Java Concurrency in Practice
 - 笔记
 tags:
 - concurrency
 - Java并发编程
-- reading note
 ---
 
 第一部分讲完了并发的一些基础原理，接着开始讲具体怎样构建并发程序。

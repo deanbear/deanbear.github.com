@@ -7,7 +7,7 @@ slug: letsgo_rockandroll
 title: 摇滚吧，邓丽君
 wordpress_id: 88
 categories:
-- 胡说
+- 胡说/Who Says
 tags:
 - 摇滚梦
 - 梦想就是把吹的牛给抡圆

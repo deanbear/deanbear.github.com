@@ -7,7 +7,7 @@ slug: it_happends_finally
 title: 嚯。终于出现了！
 wordpress_id: 12
 categories:
-- 胡说
+- 胡说/Who Says
 tags:
 - 我从此站起来了
 - 我的第一个网站

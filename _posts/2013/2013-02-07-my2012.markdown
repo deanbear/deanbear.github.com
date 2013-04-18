@@ -7,7 +7,7 @@ slug: my2012
 title: 我的2012
 wordpress_id: 110
 categories:
-- 胡说
+- 胡说/Who Says
 tags:
 - 我的2012
 - 生活
