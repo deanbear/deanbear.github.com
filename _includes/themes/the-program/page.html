@@ -4,8 +4,13 @@
 			<header>
 				<div class="unit-head">
 					<div class="unit-inner unit-head-inner">
-						<h1 class="h2 entry-title">{{ page.title }}
-							{% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}
+						<h1 class="h2 entry-title">
+							{% if page.title != "The Dean Bear" %}
+								{{ page.title }}
+								{% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}
+							{% else %}
+								{{ page.tagline }}
+							{% endif %}
 						</h1>
 					</div><!-- unit-inner -->
 				</div><!-- unit-head -->
@@ -15,6 +20,13 @@
 				<div class="entry-content">
 					{{ content }}
 				</div><!-- entry-content -->
+				{% if page.comments %}
+				<div class="misc-content">
+					<div class="comment">
+					{% include JB/comments %}
+					</div>
+				</div><!-- misc-content -->
+				{% endif %}
 			</div><!-- bd -->
 
 			<footer class="unit-foot">

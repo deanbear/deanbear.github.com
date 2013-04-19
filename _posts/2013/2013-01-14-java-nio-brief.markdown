@@ -7,7 +7,7 @@ slug: java-nio-brief
 title: Java NIO 简要
 wordpress_id: 97
 categories:
-- 技术流
+- 技术流/TechGanster
 tags:
 - nio
 ---

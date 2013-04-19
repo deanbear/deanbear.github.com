@@ -7,7 +7,7 @@ slug: composition_vs_inheritance
 title: 组合与继承:物尽其用，各取所需。
 wordpress_id: 45
 categories:
-- 技术流
+- 技术流/TechGanster
 tags:
 - Java
 - OOP
