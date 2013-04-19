@@ -7,7 +7,7 @@ slug: search_engine_glossary
 title: 搜索引擎术语
 wordpress_id: 75
 categories:
-- 技术流/TechGanster
+- 技术流/TechGangster
 tags:
 - 哥也是玩过搜索引擎的哦虽然只是毕设
 - 搜索引擎术语
