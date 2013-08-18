@@ -1,6 +1,6 @@
 ---
 layout: post
-title: TopCoderContest记录
+title: TopCoder竞赛笔记
 date: 2013-08-18 17:11:59
 categories:
 - 技术流/techgangster 
