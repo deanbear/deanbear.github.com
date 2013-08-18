@@ -1536,6 +1536,7 @@ hr {
 }
 
 .real-footer {
+  text-align:center;
   display:block;
   padding: 26px 26px;
 }
