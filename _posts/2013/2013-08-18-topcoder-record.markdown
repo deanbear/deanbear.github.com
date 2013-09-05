@@ -23,6 +23,8 @@ Get fun from programming. May the force be with you.
 
 ###SRM589 2013/08/27
 
+2013/09/05 update
+
 因爲是晚上七點鐘比賽，我以爲吃個飯回來再註冊還來得及，結果就錯過了。然後我就補做了一下。
 
 - GooseTattarrattatDiv2:
