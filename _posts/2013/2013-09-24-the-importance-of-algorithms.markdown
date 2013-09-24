@@ -14,7 +14,7 @@ tags:
 
 **这篇文章翻译自TopCoder上的这篇[_Importance of Algorithms_](http://community.topcoder.com/tc?module=Static&d1=tutorials&d2=importance_of_algorithms)。老子吐血翻译，转载请注明出处就好谢谢。**
 
-===
+---
 
 **介绍**
 
@@ -34,14 +34,14 @@ tags:
 
 |			|			|
 |-----------|----------|
-| O(Log(N)) | 10^-7 秒 |
-| O(N)      | 10^-6 秒 |
-| O(N*Log(N))| 10^-5 秒|
-| O(N^2 )   | 10^-4 秒 |
-| O(N^6)    | 3分钟    |
-| O(2^N)    | 10^14 年 |
-| O(N!)     |  10^142 年|
-|           |          |
+| O(Log(N)) | 10^-7 秒 
+| O(N)      | 10^-6 秒 
+| O(N*Log(N)) | 10^-5 秒
+| O(N^2 )   | 10^-4 秒 
+| O(N^6)    | 3分钟    
+| O(2^N)    | 10^14 年 
+| O(N!)     |  10^142 年
+|           |          
 
 **排序算法**
 
