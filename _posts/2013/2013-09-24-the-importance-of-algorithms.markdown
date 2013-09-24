@@ -12,7 +12,7 @@ tags:
 
 **算法其实不是很重要，其他对大部分人来说是这样。因为总有极个别聪明的家伙发明算法，也有部分机智的家伙应用算法，根本不需要剩下的人操心。所以你是想做大部分人，还是想成为那个特别的人？**
 
-**这篇文章翻译自TopCoder上的这篇[_Importance of Algorithms_](http://community.topcoder.com/tc?module=Static&d1=tutorials&d2=importance_of_algorithms)。老子吐血翻译，转载请注明出处就好谢谢。**
+**这篇文章翻译自TopCoder上的这篇[_Importance of Algorithms_](http://community.topcoder.com/tc?module=Static&d1=tutorials&d2=importance_of_algorithms)。老子吐血翻译，然后居然翻译到一半意识到忘记用繁体字了=。=然后就这样吧。转载请注明出处就好谢谢。**
 
 ---
 
@@ -42,6 +42,8 @@ tags:
 | O(2^N)    | 10^14 年 
 | O(N!)     |  10^142 年
 |           |          
+
+
 
 **排序算法**
 
