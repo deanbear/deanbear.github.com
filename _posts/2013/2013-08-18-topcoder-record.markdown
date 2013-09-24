@@ -8,6 +8,10 @@ tags:
 - TopCoder
 - Programming
 - algorithm
+- SRM587
+- SRM588
+- SRM589
+- SRM590
 ---
 讀書的時候，在NIT埋頭搞了一年多的ACM，後面轉學了，到ZJUT的時候又稍微玩了個把月拿了個校一等獎就去實習了，後面的兩年就沒再接觸過編程競賽了。今年搬家和新室友住一起，其中一個是ACMer，參加過WorldFinal，工作之後還有在堅持玩競賽。所以我這把年紀才開始玩TopCoder就是由他帶起的。
 
