@@ -13,7 +13,9 @@ tags:
 
 9月15號我們終於把公司搬到新園區了。除了在偏遠的鄉下，其他的配套設施還是很優秀的。碰巧公司今年被 _財富_ 評爲[最受讚賞中國公司](http://www.fortunechina.com/rankings/c/2013-09/26/content_177039.htm)。當然這個都是虛的東西也沒有提升優越感以及自豪感之類的。以前總是很眼紅硅谷那些IT公司的辦公環境多棒多愜意之類的。等到自己也入駐這樣的舒適園區的時候，才發現不管到哪兒，活都得幹，環境對人的影響其實是微乎其微的，起碼對於我是這樣。更好的環境只是期望你能把更多的時間花在公司。如果你24小時不用離開辦公園區那正是資本家最喜聞樂見的。配圖是我在城西最後一個辦公地點華星科技的工位留影，其實在城西，我待過了創業大廈，華星產業園，華星時代，然後才是華星科技。兩年的時光說再見。現在，新的開始。本田小龜終於派上了用途，每天上班五公里下班五公里，小區在南，我廠在北，筆直的一條叫高教路的公路開到底。在園區裏發現了很多好機車。眼紅無數，九宮格的那張就是和一臺哈雷合影。我現在很迷[杜卡迪的大魔王](http://ducatichina.cn/bike.php)，也不知道什麼時候能買一輛。新辦公園區的照片我也沒拍，下面的視頻湊合着看吧。
 
-<div id="player_1"><a onclick="player('player_1','http://cloud.video.taobao.com//play/u/1067522205/p/1/e/1/t/1/10526188.swf','640','360','flash');" class="abtn f12">点击播放flash</a><div id="p_player_1" style="display: block; margin: 5px 0px 0px 2px;"><object data="http://cloud.video.taobao.com//play/u/1067522205/p/1/e/1/t/1/10526188.swf" type="application/x-shockwave-flash" width="640" height="360"><param name="autostart" value="false"><param name="loop" value="true"><param name="quality" value="high"><embed src="http://cloud.video.taobao.com//play/u/1067522205/p/1/e/1/t/1/10526188.swf" quality="high" width="640" height="360" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"></object></div></div>
+	
+<div id="p_player_1" style="display: block; margin: 5px 0px 0px 2px;"><object data="http://cloud.video.taobao.com//play/u/1067522205/p/1/e/1/t/1/10537433.swf" type="application/x-shockwave-flash" width="470" height="320"><param name="autostart" value="true"><param name="loop" value="true"><param name="quality" value="high"><embed src="http://cloud.video.taobao.com//play/u/1067522205/p/1/e/1/t/1/10537433.swf" quality="high" width="470" height="320" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"></object></div>
+
 
 這個月加班還是蠻嚴重的。不僅中秋加了班，而且連續好幾天都是晚上十一點以後才回家。這個公司有很棒的業務，很強的技術支撐着絕頂的運氣。希望在一個月後，一切努力都能換來理所應當的高亮。
 
