@@ -7,7 +7,7 @@ categories:
 tags:
 - 月记
 ---
-<div align="center">![sept](http://farm8.staticflickr.com/7326/9976775905_d74a83c646_o.jpg)</div>
+<div align="center"><img src="http://farm8.staticflickr.com/7326/9976775905_d74a83c646_o.jpg" /></div>
 
 這個月萌生了一個想法，像我這麼懶又「日理萬機」，一個月寫一篇生活月記也就差不多了。再配些圖片，也挺好的。就是照片也懶得拍所以今天查了一下手機相冊，也就十張左右而且都往[我的Instagram](http://instagram.com/thedeanbear)上貼了。今天28號，寫完這個月的東西，十一放假安心回家。PS，在我心裏，國慶是雙十，哈哈，噓。
 
