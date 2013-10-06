@@ -1,6 +1,6 @@
 ---
 layout: post
-title: TopCoder竞赛笔记
+title: 2013年TopCoder竞赛笔记
 date: 2013-08-18 17:11:59
 categories:
 - 技术流/techgangster 
@@ -8,10 +8,7 @@ tags:
 - TopCoder
 - Programming
 - algorithm
-- SRM587
-- SRM588
-- SRM589
-- SRM590
+- SRM
 ---
 讀書的時候，在NIT埋頭搞了一年多的ACM，後面轉學了，到ZJUT的時候又稍微玩了個把月拿了個校一等獎就去實習了，後面的兩年就沒再接觸過編程競賽了。今年搬家和新室友住一起，其中一個是ACMer，參加過WorldFinal，工作之後還有在堅持玩競賽。所以我這把年紀才開始玩TopCoder就是由他帶起的。
 
@@ -24,6 +21,37 @@ TopCoder的賽制啊判分標準之類的我還不熟，待以後玩利落了再
 Get fun from programming. May the force be with you.
 
 ***
+
+###SRM591 2013/09/17
+
+2013/10/06 update
+
+這場比賽蠻搞笑的，我雖然只做了250pts的題目，但是在500pts上我Challenge了3題，2 Success 1 Fail，多賺了75pts共計290+排名Div2的127名，分數也漲到900+，僥倖從灰色變爲綠色了。我只能說從別人的代碼裏找漏洞的感覺太爽了。
+
+- TheArithmeticProgression
+
+  題目簡單，只是很繞，就是說如何使得a+c=2b能順利相等，要麼a+c+x? =2b，要麼a+c=2(b+y?)，選擇x?還是y?，則根據min(|x?|,|y?|)來決定。
+
+- ConvertibleStrings
+
+  這道題目在比賽時沒做出來，也忘記了C++中還有很好用的字典排序函數next_permutation。覺得很多人肯定會往簡單的想，直接用貪心水過，當時想了個特殊情況，自己沒做出來也不能讓別人好過呀。然後在Challenge階段直接用這個數據幹掉了2個，當時那個爽。然後就很賤的想直接憑藉這個數據多幹掉幾個人，然後看都不看他們的代碼，直接Challenge...然後就失敗了，不敢再亂來了赫赫。
+  
+  題目意思是說兩個字符串A，B。A，B互相映射，約束就是B中的字母與A中的字母必須一一對應，不能出現一對多的關係以及多對多的關係。問題是給定兩個字符串，計算出需要的最小改動數，使得A，B互相映射。
+  
+  我的做法就是將A中涉及的字母全部統計出來(vOrder記錄)，以及記錄它們的總數(tot[])並且把A中字母對應到B的映射字母也做一個關聯記錄(record[][]記錄)。對vOrder做全排列(next_permutation)，然後記錄每次全排列時按照此次排列順序獲得的改動數，所有排列遍歷完後，即可得出最小排列數。
+  
+  因爲題目字母種類少(才10種，A-I)，所以可以大膽放心的使用全排列。如果n=100, O(n!)可是需要10^142 年才能完成全排列…
+
+- YetAnotherTwoTeamsProblem
+
+  我發現Div2真的超愛用DP類型作爲難題，想錯了就瞎，想對了編碼不要太快太短。
+  
+  題意是給你n個小夥伴，讓你組成A，B兩隊，每個小夥伴的強弱不同，約束條件爲SumSkills(A) > SumSkills(B) and SumSkills(A) - MostWeakGuyInA < SumSkills(B) + MostWeakGuyInA。
+  
+  開一個小夥伴Skill總和大小的數組dp[]，並將dp[0] = 1。將小夥伴Skills數組降序排列，Skill從最大開始遍歷，dp則從Skill總數開始往下走，dp[j] += dp[j-Skill[i]]，即可獲得所有的分組組合情況。再用上述兩個約束篩選出符合條件的組合，累加即可獲得答案。DP就是如此妙不可言，以空間換取時間。
+  
+[看SRM591的代碼點擊我](https://github.com/deanbear/TopCoder/tree/master/SRM/SRM591)
+
 
 ###SRM590 2013/09/07
 
