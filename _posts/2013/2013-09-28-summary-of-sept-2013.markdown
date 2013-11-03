@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 2013年9月汇报
+title: 2013年9月
 date: 2013-09-28 16:20:23
 categories:
 - 活着/still alive
