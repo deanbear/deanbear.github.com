@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MacBook Pro加装SSD炮制Fusion Drive
+title: MacBook Pro雙硬盤SSD+HDD炮製Fusion Drive
 date: 2013-11-09 18:41:15
 categories:
 - 技术流/techgangster
