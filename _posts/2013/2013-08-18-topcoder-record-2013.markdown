@@ -22,6 +22,34 @@ Get fun from programming. May the force be with you.
 
 ***
 
+###SRM596 2013/11/01
+
+2013/11/18 update
+
+只差5分鐘我就可以參加時，被叫去改代碼發佈了，當時已經11點了...後來性能壓測到早上，就這樣又錯過了。
+
+- FoxAndSightseeing
+
+  去掉一個節點，使得損失最小的鏈接法。O(n^2 )可優化爲O(2n)，小意思。
+
+- ColorfulRoad
+
+  從起點按照"RGB"的跳躍剛好到終點，O(n^2 )就順利解決了，保存每步最小結果，局部最優的貪心是適用的。
+  
+- SparseFactorialDiv2
+
+  這題告訴我們數學思維是有多關鍵，多重要。反正我是做不來了，看了別人的代碼還是做不來，Google到了解題思路才恍然大悟。[別人的Blog，解題思路](http://www.cnblogs.com/shinecheng/p/3405012.html)
+  
+  1. F(n+divisor)%divisor爲0，則F(n)%divisor也爲0
+  
+  2. [1,n]能被divisor整除的，有n/divisor個數。
+  
+  3. 求[F(lo),F(hi)]區間內被divisor整除的個數，可轉化爲：[F(1),F(hi)]被整除個數 - [F(1),F(lo)]被整除個數
+  
+  4. F(n)是由多個因式組成的，因式在整除上可能存在重疊，例如因式4和因式2都被2整除，但不能這麼算3個，而是F(2+2)有因式4被2整除，F(2)有因式2被2整除，所以[F(1),F(4)]被2整除的算是2個。所以要記錄取模重複的因式以免重复计算。
+  
+[看SRM595的代碼點擊我](https://github.com/deanbear/TopCoder/tree/master/SRM/SRM595)
+
 ###SRM595 2013/10/25
 
 2013/11/17 update
