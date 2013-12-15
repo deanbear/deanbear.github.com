@@ -22,6 +22,18 @@ Get fun from programming. May the force be with you.
 
 ***
 
+#暂停更新
+
+由於工作的繁忙度已經影響到生活的習慣與業餘愛好的培養，甚至沒有時間來思考1000pts的題目，我只好暫時放棄對TopCoder的研究。
+
+有的時候你必須做出取捨。
+
+我認爲保留吉他以及閱讀的愛好有助於我健康向上的生活以及成長。
+
+但是我還是會偶爾做一做TopCoder，雖然做得很爛，但是也代表着我不放棄不妥協的態度。
+
+https://github.com/deanbear/TopCoder
+
 ###SRM596 2013/11/01
 
 2013/11/18 update
