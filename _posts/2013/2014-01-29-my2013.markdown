@@ -1,5 +1,6 @@
 ---
 author: Bear
+layout: post
 date: 2014-01-29 14:56:54
 title: 我的2013
 categories:
